@@ -6,13 +6,13 @@
 # Difficulty: easy.
 
 def reverse(str)
-  return "" if str.length === 0
-  (0..str.length / 2).each do |i|
-    x = str[0]
-    str[0] = str[str.length - 1]
-    str[str.length - 1] = x
-    str
+  return str if str.length < 2
+  (0...str.length / 2).each do |i|
+    x = str[i]
+    str[i] = str[str.length - 1 - i]
+    str[str.length - 1 - i] = x
   end
+  return str
 end
 
 # These are tests to check that your code is working. After writing
