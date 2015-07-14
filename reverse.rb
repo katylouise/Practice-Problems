@@ -5,7 +5,14 @@
 #
 # Difficulty: easy.
 
-def reverse(string)
+def reverse(str)
+  return "" if str.length === 0
+  (0..str.length / 2).each do |i|
+    x = str[0]
+    str[0] = str[str.length - 1]
+    str[str.length - 1] = x
+    str
+  end
 end
 
 # These are tests to check that your code is working. After writing
