@@ -4,10 +4,12 @@
 #
 # Difficulty: easy.
 
-def count_vowels(string)
+def count_vowels(str)
   count = 0
-  if string.match(/[aeiou]/)
-    count += 1
+  (0...str.length).each do |i|
+    if str[i].match(/[aeiou]/)
+      count += 1
+    end
   end
   return count
 end
