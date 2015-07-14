@@ -6,6 +6,9 @@
 def time_conversion(minutes)
   hours = minutes / 60
   mins = minutes % 60
+  if mins < 10
+    mins = "0" + mins.to_s
+  end
   return "#{hours}:#{mins}"
 end
 
