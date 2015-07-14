@@ -6,7 +6,11 @@
 # Difficulty: easy.
 
 def factorial(n)
-  n === 0 ? 1 : factorial(n - 1)
+  if n === 0
+    return  1
+  else
+    n * factorial(n - 1)
+  end
 end
 
 # These are tests to check that your code is working. After writing
