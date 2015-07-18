@@ -17,12 +17,12 @@ def dasherize_number(num)
     end
   end
   if num_string.start_with?("-")
-       puts num_string.slice!(0)
+    num_string.slice!(0)
   end
   if num_string.end_with?("-")
-      puts num_string.chop!
+    num_string.chop!
   end
-    puts num_string
+    num_string.gsub("--", "-")
 end
 
 # These are tests to check that your code is working. After writing
